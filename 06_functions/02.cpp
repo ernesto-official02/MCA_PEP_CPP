@@ -8,7 +8,7 @@ using namespace std;
 
 
 
-int fact1(int n)
+int fact(int n)
 {   int sum =1;
     for(int i =1 ; i<=n ;i++)
     {
@@ -19,34 +19,14 @@ int fact1(int n)
     return sum;
 }
 
-int  fact2(int r)
-{   int sum =1;
-    for(int i =1 ; i<=r ;i++)
-    {
-    
-        sum*=i;
-
-    }
-    return sum;
-}
-
-int fact3(int n ,int r)
-{   int sum =1;
-    int t =n-r;
-    for(int i =1 ; i<=t;i++)
-    {
-    
-        sum*=i;
-
-    }
-    return sum;
-}
 
 
-int combination(int a , int b, int c)
+
+int combination(int n , int r)
 {
-    return a/b*c;
-    
+    int num = fact(n);
+    int denum=fact(r)*fact(n-r);
+    return num/denum;
 }
 
 
@@ -65,11 +45,11 @@ int main()
     cin>>r;
 
     
-   int a= fact1(n);
-   int b= fact2(r);
-   int c=fact3(n ,r);
+//    int a= fact1(n);
+//    int b= fact2(r);
+//    int c=fact3(n ,r);
 
-   int ans= combination(a,b,c);
+   int ans= combination(n,r);
    cout<<"The combination value of ncn is : ";
    cout<<ans;
 
