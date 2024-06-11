@@ -5,9 +5,6 @@
 #include<iostream>
 using namespace std;
 
-
-
-
 int fact(int n)
 {   int sum =1;
     for(int i =1 ; i<=n ;i++)
@@ -19,18 +16,12 @@ int fact(int n)
     return sum;
 }
 
-
-
-
 int combination(int n , int r)
 {
     int num = fact(n);
     int denum=fact(r)*fact(n-r);
     return num/denum;
 }
-
-
-
 
 
 int main()
@@ -43,11 +34,6 @@ int main()
     cout<<"enter the value of c"<<endl;
 
     cin>>r;
-
-    
-//    int a= fact1(n);
-//    int b= fact2(r);
-//    int c=fact3(n ,r);
 
    int ans= combination(n,r);
    cout<<"The combination value of ncn is : ";
