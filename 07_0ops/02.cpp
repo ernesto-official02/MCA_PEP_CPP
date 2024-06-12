@@ -4,10 +4,11 @@ using namespace std;
 
 class emp
 {
-    public:
+    private:
     string name;
     int salary;
-
+    
+   public:
     void get()
     {
         cout<<"Enter the name of the employee"<<endl;
