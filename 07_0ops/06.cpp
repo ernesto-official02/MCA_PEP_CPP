@@ -17,10 +17,10 @@ class Student
 
     }
      //parameterized constructor
-    Student(string n,int rno)
+    Student(string name,int rollno)
     {
-        name=n;
-        rollno=rno;
+        this->name=name;
+        this->rollno=rollno;
     }
 
     void display()
