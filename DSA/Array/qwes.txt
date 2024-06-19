@@ -1,0 +1,13 @@
+<----ARRAY QWES TO PRACTICE WHICH COULD BE INTERVIEW TEST ---->
+
+swap alternatate number 
+
+pair sum
+
+triplet su,
+
+duplicate elemets
+
+unique elements
+
+find intersection
