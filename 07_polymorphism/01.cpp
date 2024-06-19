@@ -18,9 +18,9 @@ public:
 int main() {
     Calculator calc;
 
-    std::cout << "Sum of 3 and 5 (int): " << calc.add(3, 5) << std::endl;
+    cout << "Sum of 3 and 5 (int): " << calc.add(3, 5) <<endl;
 
-    std::cout << "Sum of 3.5 and 2.7 (double): " << calc.add(3.5, 2.7) << std::endl;
+    cout << "Sum of 3.5 and 2.7 (double): " << calc.add(3.5, 2.7) <<endl;
 
     return 0;
 }

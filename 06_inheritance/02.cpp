@@ -8,7 +8,7 @@ class base
     public:
     void print()
     {
-        cout<<"From base"<<endl;
+      cout<<"From base"<<endl;
     }
 };
 
