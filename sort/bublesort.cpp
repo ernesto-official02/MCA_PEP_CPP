@@ -1,4 +1,4 @@
-//selection _sort
+//bubble _sort
 #include<iostream>
 
 using namespace std;
@@ -12,30 +12,31 @@ void generate_array(int arr[], int n)
     }
 }
 
-void selection_sort(int arr[],int size)
+void Bubble_sort(int arr[],int size)
 {
-    for(int i =0 ; i<size;i++)
-    {    int min_idx=i;
-        for(int j=i+1;j<size;j++)
+    for(int i =size ; i>0;i--)
+    {    int swapped= false;
+        for(int j=0;j<i-1;j++)
         {
-            if(arr[j]<arr[min_idx])
+            if(arr[j]>arr[j+1])
             {
-               min_idx=j;
+            swap(arr[j],arr[j+1]);
+            swapped=true;
             }
-            swap(arr[min_idx],arr[i]);
         }
+        if(swapped==false) break;
     }
 }
 int main()
 {
     int n;
-    cin>>n;
+    cin>>n;     
     int arr[n];
     generate_array(arr , n);
     int size = sizeof(arr) / sizeof(arr[1]);
 
 
-    selection_sort(arr,size);
+    Bubble_sort(arr,size);
     for(int i=0;i<n;i++)
    {
       cout<<arr[i]<<" ";

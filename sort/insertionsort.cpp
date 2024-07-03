@@ -1,4 +1,4 @@
-//selection _sort
+//insertion _sort    checking left side and swap `
 #include<iostream>
 
 using namespace std;
@@ -12,17 +12,16 @@ void generate_array(int arr[], int n)
     }
 }
 
-void selection_sort(int arr[],int size)
+void Insertion_sort(int arr[],int size)
 {
     for(int i =0 ; i<size;i++)
-    {    int min_idx=i;
-        for(int j=i+1;j<size;j++)
+    { 
+       int j =i;
+       while(j>0 && arr[j-1]>arr[j])
         {
-            if(arr[j]<arr[min_idx])
-            {
-               min_idx=j;
-            }
-            swap(arr[min_idx],arr[i]);
+           swap(arr[j-1],arr[j]);
+           j--;
+
         }
     }
 }
@@ -35,7 +34,7 @@ int main()
     int size = sizeof(arr) / sizeof(arr[1]);
 
 
-    selection_sort(arr,size);
+    Insertion_sort(arr,size);
     for(int i=0;i<n;i++)
    {
       cout<<arr[i]<<" ";

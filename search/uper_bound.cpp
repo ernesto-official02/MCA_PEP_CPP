@@ -23,17 +23,16 @@ int lower_bound(int arr[],int size,int x)
 
     while(start<=end)
     {      
-        
 
-        if(arr[mid]>=x )
+        if(arr[mid]>x )
         {
             result = mid;
-            end= mid +1;
+            end= mid - 1;
         }
 
         else
         {
-            start =mid+1;
+            start =mid + 1;
         }
         mid = (start + end)/2;
     }
